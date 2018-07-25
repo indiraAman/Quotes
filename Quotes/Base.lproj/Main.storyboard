@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,171 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Quotes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fony_176" translatesAutoresizingMaskIntoConstraints="NO" id="bPP-zM-FIl">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="papyrus_backgr" translatesAutoresizingMaskIntoConstraints="NO" id="riu-M7-Exk">
+                                <rect key="frame" x="21" y="319" width="333" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="center" adjustsFontForContentSizeCategory="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xv5-uf-FdM">
+                                <rect key="frame" x="37" y="170" width="300" height="216"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">В Америке, в Скалистых горах, я видел единственный разумный метод художественной критики. В баре над пианино висела табличка: «Не стреляйте в пианиста — он делает все, что может»</string>
+                                <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="28"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="papyrus_top" translatesAutoresizingMaskIntoConstraints="NO" id="HNl-Nh-O83">
+                                <rect key="frame" x="4" y="304" width="366" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="papyrus_bottom" translatesAutoresizingMaskIntoConstraints="NO" id="7Kv-ik-2b8">
+                                <rect key="frame" x="4" y="346" width="366" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Оскар Уайлд" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7sk-GC-bvu">
+                                <rect key="frame" x="27" y="430" width="318" height="33.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fMD-pR-SaZ">
+                                <rect key="frame" x="27" y="550" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="28"/>
+                                <state key="normal" image="search">
+                                    <color key="titleColor" red="0.85882352939999995" green="0.1647058824" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jRh-Q8-6KP">
+                                <rect key="frame" x="80" y="550" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="28"/>
+                                <state key="normal" image="list">
+                                    <color key="titleColor" red="0.85882352939999995" green="0.1647058824" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="ZvV-Se-EUF" kind="show" id="IWv-Rx-uVX"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="stamp" translatesAutoresizingMaskIntoConstraints="NO" id="3rf-8s-7p3">
+                                <rect key="frame" x="254" y="437" width="83" height="74"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="anr-17-eDf">
+                                <rect key="frame" x="271" y="450" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" image="like"/>
+                                <connections>
+                                    <action selector="likeBtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DmJ-Wc-1x6"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Xv5-uf-FdM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="37" id="ODH-JD-axh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Xv5-uf-FdM" secondAttribute="trailing" constant="38" id="efc-9I-20p"/>
+                            <constraint firstItem="bPP-zM-FIl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="l4W-nl-tP2"/>
+                            <constraint firstItem="bPP-zM-FIl" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="nTK-rt-ez0"/>
+                            <constraint firstItem="bPP-zM-FIl" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="q6w-Ki-omo"/>
+                            <constraint firstItem="bPP-zM-FIl" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="qmR-tY-BIF"/>
+                            <constraint firstItem="Xv5-uf-FdM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="z8D-FR-4SO"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="autorNameLbl" destination="7sk-GC-bvu" id="PnQ-mt-BXw"/>
+                        <outlet property="favoriteListBtn" destination="jRh-Q8-6KP" id="ksw-yG-8vS"/>
+                        <outlet property="likeBtn" destination="anr-17-eDf" id="4ov-NJ-QY8"/>
+                        <outlet property="papyrusBackgr" destination="riu-M7-Exk" id="hRd-KF-gCD"/>
+                        <outlet property="papyrusBottomImg" destination="7Kv-ik-2b8" id="jlb-VY-epo"/>
+                        <outlet property="papyrusTopImg" destination="HNl-Nh-O83" id="qn0-Mn-DyY"/>
+                        <outlet property="searchBtn" destination="fMD-pR-SaZ" id="KTC-DO-OfS"/>
+                        <outlet property="stampImg" destination="3rf-8s-7p3" id="bpw-Yh-X39"/>
+                        <outlet property="tapView" destination="8bC-Xf-vdC" id="PfG-L4-Bna"/>
+                        <outlet property="textView" destination="Xv5-uf-FdM" id="Lmd-WO-dSy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
+        <!--Favorite QuotesTVC-->
+        <scene sceneID="6kg-cm-sqD">
+            <objects>
+                <tableViewController id="ZvV-Se-EUF" customClass="FavoriteQuotesTVC" customModule="Quotes" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="9I4-HW-oim">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <navigationBar key="tableHeaderView" contentMode="scaleToFill" id="0hR-Ts-ZGd">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <items>
+                                <navigationItem title="Favorite Quotes List" id="EWU-2a-zuV">
+                                    <barButtonItem key="leftBarButtonItem" style="plain" systemItem="stop" id="wwT-ft-3Jg">
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="6i4-cZ-e6z"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </navigationItem>
+                            </items>
+                        </navigationBar>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="200" id="sr5-wQ-hMW" customClass="FavoritesTVCell" customModule="Quotes" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="72" width="375" height="200"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sr5-wQ-hMW" id="FhB-Ex-Bko">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="199.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lTc-vd-1RA">
+                                            <rect key="frame" x="16" y="0.0" width="351" height="151"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2i2-Hn-haa">
+                                            <rect key="frame" x="16" y="168" width="343" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="author" destination="2i2-Hn-haa" id="eSP-Q3-22F"/>
+                                    <outlet property="quote" destination="lTc-vd-1RA" id="rbM-1H-lRp"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ZvV-Se-EUF" id="tY9-UP-9iq"/>
+                            <outlet property="delegate" destination="ZvV-Se-EUF" id="jMB-Gi-KVJ"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DdM-Z3-I4I" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1367.2" y="30.134932533733135"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="fony_176" width="991" height="1280"/>
+        <image name="like" width="50" height="50"/>
+        <image name="list" width="50" height="50"/>
+        <image name="papyrus_backgr" width="3871" height="3855"/>
+        <image name="papyrus_bottom" width="4025" height="546"/>
+        <image name="papyrus_top" width="4025" height="545"/>
+        <image name="search" width="50" height="50"/>
+        <image name="stamp" width="900" height="854"/>
+    </resources>
 </document>
